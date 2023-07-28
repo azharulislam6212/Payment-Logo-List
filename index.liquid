@@ -1,0 +1,30 @@
+        <ul class="payment-method-list payment-method-list__cart">
+          {%- for type in shop.enabled_payment_types -%}
+            <li class="me-2">
+              <a href="javascript:void(0)">
+                {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              </a>
+            </li>
+            {%- endfor -%}
+          </ul>
+
+
+ <style>
+.payment-method-list{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  gap: 6.5px;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin: 8px 0 0;
+}
+
+.payment-method-list li{
+  padding: 0;
+}
+
+</style>
